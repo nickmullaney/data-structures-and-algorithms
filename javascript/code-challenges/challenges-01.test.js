@@ -10,7 +10,7 @@ Use `forEach` to loop over the input array and work with each value.  Push the n
 
 const addOne = (arr) => {
   //new empty array
-  const myArray =[];
+  const myArray = [];
   //this takes the value(this word not important) and then my array is pushing value+1
   arr.forEach(value => myArray.push(value + 1));
   return myArray;
@@ -65,7 +65,7 @@ const greeting = (word) => {
 console.log("hello")
 const speaker = (words, callback) => {
   const newWordArray = [];
-  words.forEach( words => newWordArray.push(callback(words)));
+  words.forEach(words => newWordArray.push(callback(words)));
   return newWordArray;
   // Solution code here...
 };
@@ -87,11 +87,15 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr;
+  // arr.forEach(num => arr.push(callback(num)));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -113,7 +117,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  const availableArray = [];
+  availableItems.forEach(fruit => {
+    if (fruit.available === true) {
+      availableArray.push(fruit.name);
+    }
+  });
+  return availableArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -131,7 +141,21 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  const outArray = [];
+  arr.forEach(divvy => {
+    if (arr.divvy % 3 === 0) {
+      outArray.push("Fizz");
+    }
+    else if (arr.divvy % 5 === 0) {
+      outArray.push("Buzz");
+    }
+    else if ((arr.divvy % 5 === 0) && (arr.divvy % 3 === 0)) {
+      outArray.push("Fizz Buzz");
+    }
+    else {
+      outArray.push(arr);
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
