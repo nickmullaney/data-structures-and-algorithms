@@ -143,19 +143,20 @@ Return the resulting output array.
 const fizzbuzz = (arr) => {
   const outArray = [];
   arr.forEach(divvy => {
-    if (arr.divvy % 3 === 0) {
-      outArray.push("Fizz");
-    }
-    else if (arr.divvy % 5 === 0) {
-      outArray.push("Buzz");
-    }
-    else if ((arr.divvy % 5 === 0) && (arr.divvy % 3 === 0)) {
+    if (divvy % 5 === 0 && divvy % 3 === 0) {
       outArray.push("Fizz Buzz");
     }
+    else if (divvy % 3 === 0) {
+      outArray.push("Fizz");
+    }
+    else if (divvy % 5 === 0) {
+      outArray.push("Buzz");
+    }
     else {
-      outArray.push(arr);
+      outArray.push(divvy);
     }
   });
+  return outArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -209,7 +210,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
