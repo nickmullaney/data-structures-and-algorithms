@@ -53,7 +53,7 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  charArray.sort((a, b) => {
+  return charArray.sort((a, b) => {
     if (a.children.length !== b.children.length) {
       return a.children.length - b.children.length;
     } else {
@@ -97,7 +97,11 @@ Write a function named containsWorld that takes in a string or number of any len
 ------------------------------------------------------------------------------------------------ */
 
 const containsWorld = (input) => {
-  return /world/i.test(input);
+  const pattern = /world/;
+  if(pattern.test(input.toString())){
+    return true;
+  }
+  return false;
 };
 
 /* ------------------------------------------------------------------------------------------------
