@@ -53,7 +53,7 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  charArray.sort((a, b) => {
+  return charArray.sort((a, b) => {
     if (a.children.length !== b.children.length) {
       return a.children.length - b.children.length;
     } else {
@@ -95,9 +95,11 @@ CHALLENGE 4
 Write a function named containsWorld that takes in a string or number of any length. This function should use a regular expression pattern to return true if the input contains the word 'world' all in lower-case letters, and false if the input does not.
 
 ------------------------------------------------------------------------------------------------ */
-
 const containsWorld = (input) => {
-  return /world/i.test(input);
+  if (typeof input !== 'string' && typeof input !== 'number') {
+    throw new Error('Input must be a string or a number');
+  }
+  return /world/i.test(String(input)) && input.match(/[A-Z]/) === null;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -109,7 +111,7 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  return str.match(/\b[A-Z][a-z]+\b/g);
+  return str.match(/\b[A-Z][a-z]*\b/g);
 };
 
 /* ------------------------------------------------------------------------------------------------
