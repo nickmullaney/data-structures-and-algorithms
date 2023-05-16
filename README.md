@@ -25,3 +25,4 @@ To run your tests
 #### Table of Contents
 
 - [Array-Reverse ReadME](/javascript/array-reverse/README.md)
+- [Array Insert Shift](./javascript/array-insert-shift/readme.md)
