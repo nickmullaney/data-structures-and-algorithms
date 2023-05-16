@@ -41,3 +41,8 @@ const reverseArray = (arr) => {
 ![image](../assets/array-reverse%20test.jpg)
 
 <!-- Show how to run your code, and examples of it in action -->
+
+
+### Collaboration	
+
+-Thank you to Ryan Gallaway for the code sample to draw from for this assignment
