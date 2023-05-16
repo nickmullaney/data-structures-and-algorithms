@@ -17,8 +17,6 @@ const reverseArray = (arr) => {
 
 	let end = arr.length - 1;
 
-	
-
 	while(end > front){
 
 		let temp = arr[front];
