@@ -17,6 +17,7 @@ const reverseArray = (arr) => {
   }
   return arr;
 };
+
 console.log(reverseArray(array1));
 console.log(reverseArray(array2));
 console.log(reverseArray(array3));
