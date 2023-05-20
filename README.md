@@ -26,3 +26,6 @@ To run your tests
 
 - [Array-Reverse ReadME](/javascript/array-reverse/README.md)
 - [Array Insert Shift](./javascript/array-insert-shift/readme.md)
+- [Binary Search](./javascript/array-binary-search/README.md)
+- [Array Condenser](./javascript/array-condenser/README.md)
+- [Linked Lists](./javascript/linked-list/index.js)
