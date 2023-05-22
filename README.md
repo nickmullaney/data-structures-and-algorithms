@@ -29,3 +29,4 @@ To run your tests
 - [Binary Search](./javascript/array-binary-search/README.md)
 - [Array Condenser](./javascript/array-condenser/README.md)
 - [Linked Lists](./javascript/linked-list/index.js)
+- [Linked List Insertions](./javascript/linked-list-insertions/README.md)
