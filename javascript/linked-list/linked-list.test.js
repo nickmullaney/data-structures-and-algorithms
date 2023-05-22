@@ -26,6 +26,7 @@ describe('Linked List', () => {
     expect(linkedList.head.next.next.value).toBe('c');
     expect(linkedList.head.next.next.next).toBe(null);
   });
+
   it('should append a node to an empty linked list', () => {
     const linkedList = new LinkedList();
     linkedList.append('a');
@@ -76,4 +77,34 @@ describe('Linked List', () => {
     linkedList.insert('a');
     expect(linkedList.toString()).toBe('{ a } -> { b } -> { c } -> NULL');
   });
+
+  it('should log the values of each node in the linked list', () => {
+    // Create a new linked list
+    const linkedList = new LinkedList();
+
+    // Manually populate the linked list
+    const node1 = new Node(1);
+    const node2 = new Node(2);
+    const node3 = new Node(3);
+    node1.next = node2;
+    node2.next = node3;
+    linkedList.head = node1;
+
+    // Capture console.log output for testing
+    const consoleLogSpy = jest.spyOn(console, 'log');
+
+    // Call the traversal method
+    linkedList.traversal();
+
+    // Verify the console.log output
+    expect(consoleLogSpy).toHaveBeenCalledTimes(3);
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(1, 1);
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(2, 2);
+    expect(consoleLogSpy).toHaveBeenNthCalledWith(3, 3);
+
+    // Restore the original console.log function
+    consoleLogSpy.mockRestore();
+  });
+
+
 });

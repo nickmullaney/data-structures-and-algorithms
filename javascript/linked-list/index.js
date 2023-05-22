@@ -50,6 +50,7 @@ class LinkedList {
   includes(value) {
     let currentNode = this.head;
     while (currentNode !== null) {
+      //  Can also do a one liner no brackets if (currentNode.value === value) return true;
       if (currentNode.value === value) {
         return true;
       }
