@@ -44,12 +44,13 @@ class LinkedList {
       console.log(current.value);
       current = current.next;
     }
-  };
+  }
 
   // Check if a node with the given value exists in the linked list
   includes(value) {
     let currentNode = this.head;
     while (currentNode !== null) {
+      //  Can also do a one liner no brackets if (currentNode.value === value) return true;
       if (currentNode.value === value) {
         return true;
       }
