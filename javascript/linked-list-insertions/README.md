@@ -29,3 +29,13 @@ Thanks to chatgpt for helping with the testing
 prompts
 
 please help me write a test for a linkedList that uses the below insertBefore code to ensure that a node is inserted before a node located in the middle of a linked list
+
+for the above code can you please help me write a comprehensive list of tests for the following criteria, using javascript and I prefer to use 'it' over test
+Unit Tests
+Write tests for the following scenarios, and any other cases that help you ensure your code is working as expected.
+
+Where k is greater than the length of the linked list
+Where k and the length of the list are the same
+Where k is not a positive integer
+Where the linked list is of a size 1
+“Happy Path” where k is not at the end, but somewhere in the middle of the linked list
