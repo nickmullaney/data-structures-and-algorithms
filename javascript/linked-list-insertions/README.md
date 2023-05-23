@@ -24,6 +24,8 @@ I took the approach of trying to cycle through the linked list until finding the
 
 ## Collaboration
 
+Thanks to Tum Maupin for the assist today
+
 Thanks to chatgpt for helping with the testing 
 
 prompts
