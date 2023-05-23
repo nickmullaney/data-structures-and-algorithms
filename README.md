@@ -30,3 +30,4 @@ To run your tests
 - [Array Condenser](./javascript/array-condenser/README.md)
 - [Linked Lists](./javascript/linked-list/index.js)
 - [Linked List Insertions](./javascript/linked-list-insertions/README.md)
+- [Linked List Extensions](./javascript/linked-list-insertions/README.md)
