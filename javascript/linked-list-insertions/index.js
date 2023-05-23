@@ -73,6 +73,31 @@ class LinkedList {
       current = current.next;
     }
   }
-}
 
+
+  kthFromEnd(k) {
+    if (k < 0) {
+      return null; // k is not a positive integer
+    }
+    if (!this.head) {
+      // Empty list, cannot insert before
+      return null;
+    }
+
+    let currentValue = this.head;
+    let newCurrent = this.head;
+    for (let i = 0; i < k; i++) {
+      if (!currentValue.next) {
+        return null;
+      }
+      currentValue = currentValue.next;
+    }
+
+    while (currentValue.next) {
+      currentValue = currentValue.next;
+      newCurrent = newCurrent.next;
+    }
+    return newCurrent.value;
+  }
+}
 module.exports = { LinkedList, Node };
