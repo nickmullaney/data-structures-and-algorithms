@@ -134,4 +134,74 @@ describe('Linked List', () => {
     const result = linkedList.kthFromEnd(0);
     expect(result).toBe(2);
   });
+
+  // ------------------------------Zipped Lists----------------------------------------------------
+
+  it('should zip two empty lists and return an empty list', () => {
+    const list1 = new LinkedList();
+    const list2 = new LinkedList();
+
+    const result = LinkedList.zipLists(list1, list2);
+
+    expect(result.head).toBeNull();
+  });
+
+  it('should zip an empty list with a non-empty list and return the non-empty list', () => {
+    const list1 = new LinkedList();
+    const list2 = new LinkedList();
+    list2.append(1);
+    list2.append(2);
+    list2.append(3);
+
+    const result = LinkedList.zipLists(list1, list2);
+
+    expect(result.head.value).toBe(1);
+    expect(result.head.next.value).toBe(2);
+    expect(result.head.next.next.value).toBe(3);
+    expect(result.head.next.next.next).toBeNull();
+  });
+
+  it('should zip two lists of equal length and alternate their nodes', () => {
+    const list1 = new LinkedList();
+    const list2 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+    list1.append(5);
+    list2.append(2);
+    list2.append(4);
+    list2.append(6);
+
+    const result = LinkedList.zipLists(list1, list2);
+
+    expect(result.head.value).toBe(1);
+    expect(result.head.next.value).toBe(2);
+    expect(result.head.next.next.value).toBe(3);
+    expect(result.head.next.next.next.value).toBe(4);
+    expect(result.head.next.next.next.next.value).toBe(5);
+    expect(result.head.next.next.next.next.next.value).toBe(6);
+    expect(result.head.next.next.next.next.next.next).toBeNull();
+  });
+
+  it('should zip two lists of different lengths and append the remaining nodes', () => {
+    const list1 = new LinkedList();
+    const list2 = new LinkedList();
+    list1.append(1);
+    list1.append(3);
+    list2.append(2);
+    list2.append(4);
+    list2.append(6);
+    list2.append(8);
+    list2.append(10);
+
+    const result = LinkedList.zipLists(list1, list2);
+
+    expect(result.head.value).toBe(1);
+    expect(result.head.next.value).toBe(2);
+    expect(result.head.next.next.value).toBe(3);
+    expect(result.head.next.next.next.value).toBe(4);
+    expect(result.head.next.next.next.next.value).toBe(6);
+    expect(result.head.next.next.next.next.next.value).toBe(8);
+    expect(result.head.next.next.next.next.next.next.value).toBe(10);
+    expect(result.head.next.next.next.next.next.next.next).toBeNull();
+  });
 });
