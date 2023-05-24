@@ -14,19 +14,28 @@ arguments: value, new value
 adds a new node with the given new value immediately after the first node that has the value specified
 
 ## Whiteboard Process
+Code Challenge 7
 [image](../assets/linked-list-insertions.png)
+
+Code Challenge 8
+[image](../assets/code%20challenge%208.png)
 
 ## Approach & Efficiency
 I took the approach of trying to cycle through the linked list until finding the node we wanted to append or insert in the proper location. Using while loops and a few if statements we can find where the nodes need to be placed
 
 ## Solution
+Code Challenge 7
 [image](../assets/linked-list-insertions%20test.png)
 
+Code Challenge 8
+[image](../assets/code%20challenge%208%20test.png)
 ## Collaboration
 
-Thanks to Tum Maupin for the assist today
+Thanks to Tum Maupin for the assist on code challenge 7
 
 Thanks to chatgpt for helping with the testing 
+
+Thanks to Joshua Coffey for assisting with code challenge 8
 
 prompts
 
