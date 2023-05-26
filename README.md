@@ -31,3 +31,4 @@ To run your tests
 - [Linked Lists](./javascript/linked-list/index.js)
 - [Linked List Insertions](./javascript/linked-list-insertions/README.md)
 - [Linked List Extensions](./javascript/linked-list-insertions/README.md)
+- [Stacks & Queues](./javascript/stack-and-queues/README.md)
