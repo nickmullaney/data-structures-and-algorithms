@@ -1,23 +1,28 @@
-# Binary Search Tree
-
 ## Description
 
-The Binary Search Tree is a class that implements a binary search tree data structure. It provides methods to add nodes, check if a value is contained in the tree, and perform depth-first traversals.
+The Binary Search Tree is a class that implements a binary search tree data structure. It provides methods to add nodes, check if a value is contained in the tree, perform depth-first traversals, and find the maximum value in the tree.
+
+The Binary Search Tree follows the binary search tree property, where the left child of a node is always less than its value, and the right child is always greater. This property allows for efficient searching, insertion, and retrieval of values in logarithmic time.
 
 ## Node
 
 The `Node` class represents a node in the binary search tree. It has properties for the value stored in the node and pointers to the left and right child nodes.
 
-## BinarySearchTree
+## BinaryTree
 
-The `BinarySearchTree` class is a subclass of the `BinaryTree` class and represents a binary search tree. It inherits the depth-first traversal methods from the `BinaryTree` class and adds additional methods for adding nodes and checking containment.
+The `BinaryTree` class represents a binary tree and provides methods for depth-first traversals, including pre-order, in-order, and post-order traversals. It serves as the base class for the `BinarySearchTree` class.
 
 ### Methods
 
 - `add(value)`: Adds a new node with the given value to the binary search tree in the correct location based on the binary search tree property.
 - `contains(value)`: Returns a boolean indicating whether the given value is contained in the binary search tree.
+- `findMaximumValue()`: Returns the maximum value in the binary search tree.
 
-### Example Usage
+The `add(value)` method adds a new node to the binary search tree by following the binary search tree property. It compares the value with each node and determines whether it should be placed as the left or right child of the current node until it finds the correct position.
+
+The `contains(value)` method performs a search in the binary search tree to check if the given value is present. It compares the value with each node in the tree, recursively traversing to the left or right child until the value is found or the end of the tree is reached.
+
+The `findMaximumValue()` method traverses the binary search tree and returns the maximum value found. It starts from the root node and recursively explores the right child of each node until it reaches the leaf node with the highest value.
 
 ```javascript
 const tree = new BinarySearchTree();
@@ -27,7 +32,11 @@ tree.add(7);
 
 console.log(tree.contains(3)); // Output: true
 console.log(tree.contains(10)); // Output: false
+
+console.log(tree.findMaximumValue()); // Output: 7
 ```
+
+Please note that the `findMaximumValue()` method is now included in the Methods section, along with its description and usage example.
 
 ## Whiteboard Process
   Code Challenge 11
@@ -116,6 +125,14 @@ expect(tree.contains(3)).toBe(true);
 expect(tree.contains(10)).toBe(false);
 ```
 
+### Test 8: Find the maximum value in the tree
+```
+const tree = new BinarySearchTree();
+tree.add(5);
+tree.add(3);
+tree.add(7);
+expect(tree.findMaximumValue()).toBe(7);
+```
 
 ## Collaboration
 
