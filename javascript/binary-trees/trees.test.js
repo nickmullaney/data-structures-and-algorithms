@@ -82,6 +82,37 @@ function runTests() {
       expect(tree.contains(7)).toBe(true);
       expect(tree.contains(9)).toBe(false);
     });
+
+
+    // Test 8: Can successfully find the maximum value in the tree
+    it('should find the maximum value in the tree', () => {
+      const tree = new BinarySearchTree();
+      tree.add(5);
+      tree.add(3);
+      tree.add(7);
+      tree.add(2);
+      tree.add(4);
+      tree.add(6);
+      tree.add(8);
+      const result = tree.findMaximumValue();
+      expect(result).toEqual(8);
+    });
+
+    // Test 9: Can successfully find the maximum value in a tree with a single node
+    it('should find the maximum value in a tree with a single node', () => {
+      const tree = new BinarySearchTree();
+      tree.add(5);
+      const result = tree.findMaximumValue();
+      expect(result).toEqual(5);
+    });
+
+    // Test 10: Throws an error when finding the maximum value in an empty tree
+    it('should throw an error when finding the maximum value in an empty tree', () => {
+      const tree = new BinarySearchTree();
+      expect(() => {
+        tree.findMaximumValue();
+      }).toThrowError('Binary Tree is empty.');
+    });
   });
 }
 

@@ -11,6 +11,28 @@ class BinaryTree {
     this.root = null;
   }
 
+  findMaximumValue() {
+    if (!this.root) {
+      throw new Error("Binary Tree is empty.");
+    }
+
+    let max = this.root.value;
+
+    const traverse = (node) => {
+      if (node) {
+        if (node.value > max) {
+          max = node.value;
+        }
+        traverse(node.left);
+        traverse(node.right);
+      }
+    };
+
+    traverse(this.root);
+
+    return max;
+  }
+
   preorderTraversal() {
     if (!this.root) {
       return [];
