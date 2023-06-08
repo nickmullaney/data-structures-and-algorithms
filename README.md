@@ -33,4 +33,5 @@ To run your tests
 - [Linked List Extensions](./javascript/linked-list-insertions/README.md)
 - [Stacks & Queues](./javascript/stack-and-queues/README.md)
 - [Binary Trees](./javascript/binary-trees/README.md)
+- [K-ary Trees]('./javascript/kary-tree/README.md')
 - 
