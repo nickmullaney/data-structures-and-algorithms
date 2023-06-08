@@ -17,7 +17,7 @@ function runTests() {
       expect(tree.root.value).toBe(5);
     });
 
-    // Test 3: For a Binary Search Tree, can successfully add a left child and right child properly to a node
+    // Test 3: For a Binary Tree, can successfully add left and right child properly to a node
     it('should add left and right child nodes properly', () => {
       const tree = new BinaryTree();
       const rootNode = new Node(5);
@@ -25,6 +25,7 @@ function runTests() {
       const rightNode = new Node(7);
       rootNode.children.push(leftNode, rightNode);
       tree.root = rootNode;
+
       expect(tree.root).not.toBeNull();
       expect(tree.root.value).toBe(5);
       expect(tree.root.children.length).toBe(2);
@@ -42,21 +43,25 @@ function runTests() {
       const leftRightNode = new Node(4);
       const rightLeftNode = new Node(6);
       const rightRightNode = new Node(15);
+
       rootNode.children.push(leftNode, rightNode);
       leftNode.children.push(leftLeftNode, leftRightNode);
       rightNode.children.push(rightLeftNode, rightRightNode);
       tree.root = rootNode;
 
-      const fizzBuzzTreeRoot = tree.fizzBuzzTree(tree.root);
-      expect(fizzBuzzTreeRoot).not.toBeNull();
-      expect(fizzBuzzTreeRoot.value).toBe("Buzz");
-      expect(fizzBuzzTreeRoot.children.length).toBe(2);
-      expect(fizzBuzzTreeRoot.children[0].value).toBe("Fizz");
-      expect(fizzBuzzTreeRoot.children[1].value).toBe("Buzz");
-      expect(fizzBuzzTreeRoot.children[0].children[0].value).toBe("2");
-      expect(fizzBuzzTreeRoot.children[0].children[1].value).toBe("4");
-      expect(fizzBuzzTreeRoot.children[1].children[0].value).toBe("Fizz");
-      expect(fizzBuzzTreeRoot.children[1].children[1].value).toBe("FizzBuzz");
+      const fizzBuzzTree = fizzBuzzTree(tree.root);
+
+      expect(fizzBuzzTree).not.toBeNull();
+      expect(fizzBuzzTree.value).toBe("Buzz");
+      expect(fizzBuzzTree.children.length).toBe(2);
+      expect(fizzBuzzTree.children[0].value).toBe("Fizz");
+      expect(fizzBuzzTree.children[1].value).toBe("7");
+      expect(fizzBuzzTree.children[0].children.length).toBe(2);
+      expect(fizzBuzzTree.children[0].children[0].value).toBe("2");
+      expect(fizzBuzzTree.children[0].children[1].value).toBe("4");
+      expect(fizzBuzzTree.children[1].children.length).toBe(2);
+      expect(fizzBuzzTree.children[1].children[0].value).toBe("Fizz");
+      expect(fizzBuzzTree.children[1].children[1].value).toBe("FizzBuzz");
     });
   });
 }
