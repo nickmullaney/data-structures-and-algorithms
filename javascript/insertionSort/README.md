@@ -77,5 +77,5 @@ The tests cover various scenarios and ensure the correct behavior of the `Insert
 This project is licensed under the [MIT License](LICENSE).
 
 ## Collaboration
-
+Thanks to Reece, Kaeden, Ike, Francisco, Ryan for the assist
 Thanks to chatgpt for helping with the testing.
