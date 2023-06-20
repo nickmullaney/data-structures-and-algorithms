@@ -34,4 +34,4 @@ To run your tests
 - [Stacks & Queues](./javascript/stack-and-queues/README.md)
 - [Binary Trees](./javascript/binary-trees/README.md)
 - [K-ary Trees]('./javascript/kary-tree/README.md')
-- 
+- [InsertSort](./javascript/insertionSort/README.md)
