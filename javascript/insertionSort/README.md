@@ -70,7 +70,7 @@ npm test
 The tests cover various scenarios and ensure the correct behavior of the `InsertionSort` function.
 
 ## UML
-![Alt text](<../assets/code challenge 26.png>)
+![Alt text](<../assets/CC 27.png>)
 
 ## License
 
