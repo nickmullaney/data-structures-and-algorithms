@@ -35,3 +35,4 @@ To run your tests
 - [Binary Trees](./javascript/binary-trees/README.md)
 - [K-ary Trees]('./javascript/kary-tree/README.md')
 - [InsertSort](./javascript/insertionSort/README.md)
+- [Merge Sort](./javascript/merge-sort/README.md)
