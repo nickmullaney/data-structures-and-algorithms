@@ -38,8 +38,8 @@ class Stack {
 
 class pseudoQueue {
   constructor() {
-    this.stack1 = new Stack();
-    this.stack2 = new Stack();
+    this.stack1 = new Stack(); // Create a new stack for enqueue operations
+    this.stack2 = new Stack(); // Create a new stack for dequeue operations
   }
 
   enqueue(value) {
@@ -61,18 +61,18 @@ class pseudoQueue {
     if (this.stack1.isEmpty()) {
       throw new Error("PseudoQueue is empty");
     }
-    return this.stack1.pop();
+    return this.stack1.pop(); // Pop the top value from stack1 (which represents the oldest element)
   }
 
   peek() {
     if (this.stack1.isEmpty()) {
       throw new Error("PseudoQueue is empty");
     }
-    return this.stack1.peek();
+    return this.stack1.peek(); // Get the value at the top of stack1 (oldest element)
   }
 
   isEmpty() {
-    return this.stack1.isEmpty();
+    return this.stack1.isEmpty(); // Check if stack1 is empty to determine if the pseudo queue is empty
   }
 }
 
