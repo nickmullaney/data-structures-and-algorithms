@@ -1,6 +1,4 @@
-// const request = require('supertest');
-const HashTable = require('./HashTable');
-
+const HashTable = require('./HashTable.js');
 
 describe('HashTable', () => {
   test('Setting a key/value to the hashtable should store the value', () => {

@@ -1,7 +1,4 @@
-'use strict';
-
-
-const LinkedList = require('./LinkedList');
+const LinkedList = require('./LinkedList/index');
 
 class HashTable {
   constructor(size) {
@@ -59,38 +56,19 @@ class HashTable {
 
   keys() {
     let results = [];
-
+  
     for (let bucket of this.buckets) {
       if (bucket) {
-        for (let node of bucket) {
-          results.push(node.key); // Collect all keys from each bucket
+        let currentNode = bucket.head; // Get the head of the bucket
+        while (currentNode) {
+          results.push(currentNode.value.key); // Collect the keys from each node in the bucket
+          currentNode = currentNode.next; // Move to the next node
         }
       }
     }
-
+  
     return results; // Return the array of keys
   }
 }
-
-
-// const table = new HashTable(1024);
-
-// console.log('table:', table);
-
-// let hashOne = table.hash('Ryan');
-// let hashTwo = table.hash('Kati');
-// console.log('hashOne:', hashOne);
-// console.log('hashTwo:', hashTwo);
-
-// table.set('Ryan', 'this is my value');
-// table.set('Kati', 'how do we define value');
-// table.set('Ryan', 'updated value'); // Testing key replacement
-
-// console.log('updated table:', table);
-// console.log('get works!', table.get('Ryan'));
-// console.log('has worked:', table.has('Ryan')); // expect true
-// console.log('has worked:', table.has('Lucky')); // expect false
-// let keys = table.keys();
-// console.log('keys:', keys);
 
 module.exports = HashTable;
