@@ -70,14 +70,14 @@ Code challenges should be completed within a folder named `code-challenges` unde
       - Your test file would require the challenge file found in the directory above, which has your exported function
         - i.e. `const reverse = require('../find-maximum-value.js');
 
-## Running Tests
 
 If you setup your folders according to the above guidelines, running tests becomes a matter of deciding which tests you want to execute.  Jest does a good job at finding the test files that match what you specify in the test command
 
 From the `data-structures-and-algorithms/javascript` folder, execute the following commands:
 
 - **Run every possible test** - `npm test`
-- **Run a test for a data structure** - `npm test linked-list`
+- **Run a test for a data structure** - `npm test linked-l## Running Tests
+ist`
 - **Run a test for a specific challenge** - `npm test reverse-ll`
 
 #### Live Tests
