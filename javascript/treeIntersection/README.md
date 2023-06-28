@@ -11,6 +11,8 @@ This is a code challenge that involves finding the common values between two bin
 - Josh Coffey: Helped with completing this assignment.
 - ChatGPT: Helped with the testing.
 
+## UML
+![Code Challenge 32](../assets/lab32.png)
 ## Approach and Algorithm
 
 The `treeIntersection` function takes two binary trees as parameters: `tree1` and `tree2`. The implementation follows these steps:
