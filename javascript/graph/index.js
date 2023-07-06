@@ -33,6 +33,29 @@ class Graph {
   size() {
     return this.adjacencyList.size;
   }
+
+  breadthFirst(startNode) {
+    const visited = new Set();
+    const queue = [];
+    visited.add(startNode);
+    queue.push(startNode);
+    const visitedOrder = [];
+
+    while (queue.length > 0) {
+      const currentNode = queue.shift();
+      visitedOrder.push(currentNode);
+
+      for (const neighbor of currentNode.adjacentNodes) {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
+          queue.push(neighbor);
+        }
+      }
+    }
+
+    return visitedOrder;
+  }
+
 }
 
 module.exports = Graph;
