@@ -1,5 +1,17 @@
 'use strict';
 
+class Vertex {
+  constructor(value){
+    this.value = value;
+  }
+}
+
+class Edge{
+  constructor(vertex, weight=0){
+    this.vertex = vertex;
+    this.weight = weight;
+  }
+}
 class Graph {
   constructor() {
     this.adjacencyList = new Map();
@@ -56,6 +68,73 @@ class Graph {
     return visitedOrder;
   }
 
+  // TODO ALTERNATE SOLUTION
+  // breadthFirst(root, callback){
+  //   const queue = [root];
+  //   const visited = new Set();
+  //   visited.add(root);
+  //   let current = null;
+
+  //   while(queue.length){
+  //     // the first time, we pop the vertex
+  //     current = queue.pop();
+
+  //     // if a callback exists, we use it to "do the thing"
+  //     if(callback){
+  //       callback(current.value);
+  //     }
+
+  //     // grab neighbor(s) if it exists
+  //     const neighbors = this.getNeighbors(current); 
+  //     // if this was the array: ['a', 'b', 'c']
+  //     // "for edge of" would equal 'a', the element
+  //     // whereas "for edge in" would equal 0, the index
+  //     for(let edge of neighbors){
+  //       // if we haven't visited the node, 
+  //       if(!visited.has(edge.vertex)){
+  //         // we add the vertex to the visited set to avoid duplication
+  //         visited.add(edge.vertex);
+  //         // THEN we insert the vertex into the proper end of the queue
+  //         queue.unshift(edge.vertex);
+  //       }
+  //     }
+  //   }
+  //   return visited;
+  // }
+
+  depthFirst(root, callback){
+    const stack = [root];
+    const visited = new Set();
+    visited.add(root);
+    let current = null;
+
+    while(stack.length){
+      // the first time, we pop the vertex
+      current = stack.pop();
+
+      // if a callback exists, we use it to "do the thing"
+      if(callback){
+        callback(current.value);
+      }
+
+      // grab neighbor(s) if it exists
+      const neighbors = this.getNeighbors(current); 
+      // if this was the array: ['a', 'b', 'c']
+      // "for edge of" would equal 'a', the element
+      // whereas "for edge in" would equal 0, the index
+      for(let edge of neighbors){
+        // if we haven't visited the node, 
+        if(!visited.has(edge.vertex)){
+          // we add the vertex to the visited set to avoid duplication
+          visited.add(edge.vertex);
+          // THEN we insert the vertex into the proper end of the stack
+          stack.push(edge.vertex);
+        }
+      }
+    }
+    return visited;
+  }
+
 }
 
-module.exports = Graph;
+module.exports = Graph, Vertex, Edge;
